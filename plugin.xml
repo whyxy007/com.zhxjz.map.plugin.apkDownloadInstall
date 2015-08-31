@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+      id="com.zhxjz.map.plugin.apkDownloadInstall"
+      version="1.0.0">
+    <name>ApkDownloadInstall</name>
+    <description>ApkDownloadInstall</description>
+    <license>Apache 2.0</license>
+    <keywords>cordova,ApkDownloadInstall</keywords>
+
+    <js-module src="www/apkDownloadInstall.js" name="apkDownloadInstall">
+        <clobbers target="apkDownloadInstall" />
+    </js-module>
+    
+    <!-- android -->
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="ApkDownloadInstallPlugin" >
+                <param name="android-package" value="com.zhxjz.map.plugin.ApkDownloadInstall"/>
+            </feature>
+        </config-file>
+
+        <source-file src="src/android/ApkDownloadInstall.java" target-dir="src/com/zhxjz/map/plugin" />
+    </platform>
+
+   
+</plugin>
