@@ -11,5 +11,10 @@ apkDownloadInstall.startup(downloadURL,
                 alert('error');
         }
 );
+
+注意：
+ * 需要在AndroidManifest.xml里面增加权限访问网络和写存储卡，
+ * <uses-permission android:name="android.permission.INTERNET" />
+ * <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 </pre>
 <h1>enjoy it :)</h1>
